@@ -1,0 +1,133 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<!--
+`waterfall-columns-grid`
+waterfall-columns-grid create waterfall grid. The behavior is similar to css colums, but elements arranged in horisontals
+Polymer wrapper for waterfall.js.
+```
+<waterfall-columns-grid col-count="5" col-width="270px" col-gap="30px">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+  <div>Item 4</div>
+  <div>Item 5</div>
+</waterfall-columns-grid>
+```
+
+@element waterfall-columns-grid
+@demo demo/index.html 
+@hero hero.svg
+-->
+
+<dom-module id="waterfall-columns-grid">
+  <template>
+    <style>
+      :host {
+        display: block;
+        box-sizing: border-box;
+      }
+    </style>
+    <content id="content"></content>
+  </template>
+  <script src="bower_components/waterfall/waterfall.min.js"></script>
+  <script>
+    (function() {
+      'use strict';
+
+      function computeValues(host){
+
+        var rootWidth = parseFloat(host.getComputedStyleValue('width'));
+        var gap = parseVal(host.colGap, rootWidth);
+        var width = parseVal(host.colWidth, rootWidth);
+        var count = host.colCount;
+        while(width * count + gap * (count - 1) > rootWidth){
+          count--;
+        }
+        return {
+          element: (rootWidth - gap*(count - 1)) / count,
+          gap: gap,
+          count: count
+        }
+      }
+
+      function parseVal(val, containerWidth){
+        var val = val + '';
+        var containerWidth = parseFloat(containerWidth) || 0;
+        if(/^[\d.]+%$/.test(val)){
+          return (containerWidth * parseFloat(val) / 100);
+        }
+        return parseFloat(val);
+      }
+
+      Polymer({
+        is: 'waterfall-columns-grid',
+        properties: {
+          /**
+          * set max columns count
+          * @attribute col-count
+          */
+          colCount: {
+            value: 4,
+            type: Number
+          },
+          /**
+          * set min columns width (10px, 10%, 10)
+          * @attribute col-width
+          */
+          colWidth: {
+            value: '270px',
+            type: String
+          },
+          /**
+          * set space between columns (10px, 10%, 10)
+          * @attribute col-gap
+          */
+          colGap: {
+            value: '20px',
+            type: String
+          },
+          /**
+          * parsed element width
+          * @private
+          */
+          _compWidth: {
+            value: 270,
+            type: Number
+          },
+          /**
+          * parsed column gap
+          * @private
+          */
+          _compGap: {
+            value: 20,
+            type: Number
+          }
+        },
+        attached: function(){
+            this._init();
+            window.addEventListener('resize', function(){
+              this._init();
+            }.bind(this));
+        },
+        /**
+        * rebuild columns
+        * @method reinit
+        */
+        reinit: function(){
+          this._init();
+        },
+        _init: function(){
+          Polymer.dom.flush();
+          var values = computeValues(this);
+          this.getContentChildren('#content').forEach(function(el, i){
+            el.style.width = values.element + 'px';
+            if(i+1 % values.count != 0){
+              el.style.marginRight = values.gap + 'px';
+            }
+          });
+          waterfall(Polymer.dom(this).node);
+        }
+      });
+    })();
+  </script>
+</dom-module>

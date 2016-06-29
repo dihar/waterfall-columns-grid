@@ -1,0 +1,33 @@
+{
+  "name": "waterfall-columns-grid",
+  "version": "1.0.0",
+  "authors": [
+    "Kharin Dmitriy dihar <diharin@dmail.com>"
+  ],
+  "keywords": [
+    "list",
+    "grid",
+    "waterfall",
+    "printerest",
+    "web-components",
+    "polymer",
+    "lms"
+  ],
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "description": "waterfall-columns-grid create waterfall grid. The behavior is similar to css colums, but elements arranged in horisontals",
+  "main": "waterfall-columns-grid.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "waterfall": "^1.0.3"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  }
+}

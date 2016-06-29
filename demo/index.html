@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <title>waterfall-columns-grid demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../bower_components/iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../bower_components/iron-demo-helpers/demo-snippet.html">
+
+    <link rel="import" href="../waterfall-columns-grid.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </head>
+  <body>
+
+    <div class="vertical-section-container centered">
+      <h3>Basic waterfall-columns-grid Demo</h3>
+      <p>If you want apply padding create wrap:</p>
+      <demo-snippet>
+        <template>
+          <style>
+            .demo-1{
+              background: #aaa;
+              border: 1px solid #888;
+              color: #fff;
+              font-size: 13px;
+              margin-bottom: 10px;
+            }
+            .demo-1-wrap{
+              padding: 10px;
+            }
+          </style>
+          <waterfall-columns-grid col-width="100px" col-count="3" col-gap="20px">
+            <div class="demo-1"><div class="demo-1-wrap"><p>Item 1</p> adipisicing elit. Vel cumque soluta repudiandae nemo quis! Illo obcaecati soluta sunt reprehenderit inventore, autquidem fugit recusandae autem maxime culpa, id.</div></div>
+            <div class="demo-1"><div class="demo-1-wrap"><p>Item 2</p> adipisicing elit. Vel cumque soluta repudiandae nemo quis! Illo obcaecati soluta .   sunt reprehenderit inventore, fugit recusandae autem maxime culpa, id.</div></div>
+            <div class="demo-1"><div class="demo-1-wrap"><p>Item 3</p> adipisicing elit. Vel cumque soluta repudiandae nemo quis! Illo obcaecati soluta sunt reprehenderit inventore, aut aliquid eveniet quidem fugit recusandae autem maxime culpa, id.</div></div>
+            <div class="demo-1"><div class="demo-1-wrap"><p>Item 4</p>Lorem ipsum  adipisicing elit. Distinctio, voluptatum.dolor sit amet, consectetur adipisicing elit. Vel cumque soluta repudiandae nemo quis! Illo obcaecati soluta sunt reprehenderit inventore, aut aliquid eveniet quidem fugit recusandae autem maxime culpa, id.</div></div>
+            <div class="demo-1"><div class="demo-1-wrap"><p>Item 5</p>Lorem ipsum dolor sitderit inventore, aut aliquid eveniet quidem fugit recusandae autem maxime culpa, id.</div></div>
+            <div class="demo-1"><div class="demo-1-wrap"><p>Item 6</p> adipisicing elit. Vel cumque soluta repudiandae nemo quis! Illo obcaecati soluta sunt reprehenderit  adipisicing elit. Eveniet labore hic quidem sit dicta, amet itaque laboriosam fuga, deserunt harum!inventore, aut aliquid eveniet quidem fugit recusandae autem maxime culpa, id.</div></div>
+            <div class="demo-1"><div class="demo-1-wrap"><p>Item 7</p> adipisicing elit. Vel cumque soluta repudiandae nemo quis! Illo obcaecati soluta sunt reprehenderit inventore, aut aliquid eveniet quidem fugit recusandae autem maxime culpa, id.</div></div>
+            <div class="demo-1"><div class="demo-1-wrap"><p>Item 8</p> adipisicing elit. Vel cumque soluta repudiandae nemo quis! Illo obcaecai soluta sunt reprehenderit inventore, aut aliquid eveniet quidem fugit recusandae autem maxime culpa, id.</div></div>
+          </waterfall-columns-grid>
+        </template>
+      </demo-snippet>
+      <h3>Values demo</h3>
+      <p>You can type values in px, % or only number:</p>
+      <demo-snippet>
+        <template>
+          <style>
+            .demo-1{
+              background: #aaa;
+              border: 1px solid #888;
+              color: #fff;
+              font-size: 13px;
+              margin-bottom: 10px;
+            }
+            .demo-1-wrap{
+              padding: 10px;
+            }
+          </style>
+          <waterfall-columns-grid col-width="20%" col-count="3" col-gap="40">
+            <div class="demo-1"><div class="demo-1-wrap"><p>Item 1</p> adipisicing elit. Vel cumque soluta repudiandae nemo quis! Illo obcaecati soluta sunt reprehenderit inventore, aut aliquid e fugit recusandae autem maxime culpa, id.</div></div>
+            <div class="demo-1"><div class="demo-1-wrap"><p>Item 2</p> adipisicing elit. Vel cumque soluta repudiandae nemo quis! Illo obcaecati soluta .   sunt reprehenderit inventore,  recusandae autem maxime culpa, id.</div></div>
+            <div class="demo-1"><div class="demo-1-wrap"><p>Item 3</p> adipisicing elit. Vel cumque soluta repudiandae nemo quis! Illo obcaecati soluta sunt reprehenderit inventore, aut aliquid eveniet quidem fugit recusandae autem maxime culpa, id.</div></div>
+            <div class="demo-1"><div class="demo-1-wrap"><p>Item 4</p>Lorem ipsum  adipisicing elit. Distinctio, voluptatum.dolor sit amet, consectetur adipisicing elit. Vel cumque soluta repudiandae nemo quis! Illo obcaecati soluta sunt reprehenderit inventore, aut aliquid eveniet quidem fugit recusandae autem maxime culpa, id.</div></div>
+            <div class="demo-1"><div class="demo-1-wrap"><p>Item 5</p>Lorem ipsum dolor sitderit inventore, aut aliquid eveniet quidem fugit recusandae autem maxime culpa, id.</div></div>
+            <div class="demo-1"><div class="demo-1-wrap"><p>Item 6</p> adipisicing elit. Vel cumque soluta repudiandae nemo quis! Illo obcaecati soluta sunt reprehenderit  adipisicing elit. Eveniet labore hic quidem sit dicta, amet itaque laboriosam fuga, deserunt harum!inventore, aut aliquid eveniet quidem fugit recusandae autem maxime culpa, id.</div></div>
+            <div class="demo-1"><div class="demo-1-wrap"><p>Item 7</p> adipisicing elit. Vel cumque soluta repudiandae nemo quis! Illo obcaecati soluta sunt reprehenderit inventore, aut aliquid eveniet quidem fugit recusandae autem maxime culpa, id.</div></div>
+            <div class="demo-1"><div class="demo-1-wrap"><p>Item 8</p> adipisicing elit. Vel cumque soluta repudiandae nemo quis! Illo obcaecai soluta sunt reprehenderit inventore, aut aliquid eveniet quidem fugit recusandae autem maxime culpa, id.</div></div>
+          </waterfall-columns-grid>
+        </template>
+      </demo-snippet>
+    </div>
+
+  </body>
+</html>
