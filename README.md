@@ -11,7 +11,7 @@ bower i waterfall-columns-grid --save
 
 ## template
 ```
-<link rel="import" href="bower_components/waterfall-columns-grid.html">
+<link rel="import" href="bower_components/waterfall-columns-grid/waterfall-columns-grid.html">
 <waterfall-columns-grid col-count="5" col-width="270px" col-gap="30px">
   <div>Item 1</div>
   <div>Item 2</div>
