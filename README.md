@@ -20,3 +20,7 @@ bower i waterfall-columns-grid --save
   <div>Item 5</div>
 </waterfall-columns-grid>
 ```
+
+## Documentation and demo
+
+[waterfall-columns-grid](https://dihar.github.io/components/waterfall-columns-grid/)
