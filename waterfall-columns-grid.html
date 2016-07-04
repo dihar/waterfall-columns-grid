@@ -109,6 +109,9 @@ Polymer wrapper for waterfall.js.
             window.addEventListener('resize', function(){
               this._init();
             }.bind(this));
+            this.async(function(){
+              this._init();
+            }, 200);
         },
         /**
         * rebuild columns
